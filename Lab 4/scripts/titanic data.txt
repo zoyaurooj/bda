@@ -1,0 +1,9 @@
+b.TitanicData.aggregate([
+    {
+        $group: {
+            _id: "$region",
+            total_income: {$sum: "$Pclass"},
+            average_children: {$avg: "$Age"}
+        }
+    }
+])
